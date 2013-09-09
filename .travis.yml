@@ -18,6 +18,7 @@ script: ./travis.sh
 before_script:
   - ./getpiwik.sh
   - cd ../piwik
+  - ls
   - composer install
   - uname -a
   - date
