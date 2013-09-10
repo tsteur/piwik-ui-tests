@@ -31,8 +31,8 @@ before_script:
   - cd tests/PHPUnit
 
 after_script:
-  - cd $TRAVIS_BUILD_DIR
-  - ../piwik/tests/travis/upload_artifacts.sh
+  - cd $TRAVIS_BUILD_DIR/../piwik
+  - ./tests/travis/upload_artifacts.sh
 
 notifications:
   irc:
