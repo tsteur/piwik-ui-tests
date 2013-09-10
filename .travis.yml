@@ -32,7 +32,7 @@ before_script:
 
 after_script:
   - cd $TRAVIS_BUILD_DIR
-  - ./tests/travis/upload_artifacts.sh
+  - ./piwik/tests/travis/upload_artifacts.sh
 
 notifications:
   irc:

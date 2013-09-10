@@ -3,7 +3,7 @@
 if [ ! -f piwik_commit.txt ]; then
     echo "Cannot find piwik_commit.txt!"
 
-    PIWIK_BRANCH=uitests
+    PIWIK_BRANCH=master
 else
     read -a lines -d '\n' < piwik_commit.txt
 
@@ -23,9 +23,11 @@ else
     echo "No commit to checkout."
 fi
 
+echo "Updating submodules..."
 cd piwik
 git submodule update --init --recursive
 
+echo "Geting latest UI test submodule..."
 cd tests/PHPUnit/UI
-git pull --rebase
+git pull --rebase origin master
 cd ../../..
